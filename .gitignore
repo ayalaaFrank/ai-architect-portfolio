@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# backend / frontend (אם יש שם node_modules נפרדים)
+backend/node_modules/
+frontend/node_modules/
+
+# build outputs
+dist/
+build/
+
+# env files (סודות)
+.env
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
