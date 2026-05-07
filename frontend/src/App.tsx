@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Projects from './components/Projects'
+import About from './components/About'
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:5000/api/health")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message))
-      .catch((err) => console.log(err));
-  }, []);
-
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Frontend עובד</h1>
-      <p>Backend אומר: {message}</p>
+    <div>
+      <Navbar />
+      <Hero />
+      <Projects />
+      <About />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
