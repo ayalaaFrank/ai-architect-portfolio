@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion' 
 
 const About = () => {
-  const containerVariants: Variants = {
+  const containerVariants: any = { 
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -12,7 +12,7 @@ const About = () => {
     },
   }
 
-  const itemVariants: Variants = {
+  const itemVariants: any = { 
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
