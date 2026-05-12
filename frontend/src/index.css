@@ -1,13 +1,31 @@
+/* 1. ייבוא פונטים חיצוניים תמיד בראש הקובץ */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap');
+
+/* 2. ייבוא Tailwind (בהנחה שאת בגרסה 4) */
 @import "tailwindcss";
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8f7f4;
-  color: #111;
+/* 3. הגדרות בסיס - מומלץ להשתמש ב-@layer base ב-Tailwind */
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8f7f4;
+    color: #111;
+    -webkit-font-smoothing: antialiased; /* הופך את הפונט ליותר מעודן ויוקרתי */
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-* {
-  box-sizing: border-box;
+/* 4. הסרת הריבוע הכחול המציק בטלפונים כשלוחצים על אלמנטים */
+input, button, a {
+  -webkit-tap-highlight-color: transparent;
 }
